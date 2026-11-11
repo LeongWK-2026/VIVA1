@@ -1,7 +1,6 @@
 package viva1;
 
 import java.util.Scanner;
-
 public class Q2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -21,7 +20,7 @@ public class Q2 {
         double annualRate = sc.nextDouble();
 
         // Convert the annual rate into a monthly rate
-        double monthlyRate = (annualRate / 100) / 12;
+        double monthlyRate = annualRate / (100 * 12);
 
         // Get the planned monthly payment
         System.out.print("Enter planned monthly payment (RM): ");
@@ -84,7 +83,7 @@ public class Q2 {
                 totalAmountPaid += paymentToMake;
             }
 
-            // Step 10: Record balance at Month 12, Month 24, and Month 36 into the array
+            // Record balance at Month 12, Month 24, and Month 36 into the array
             if (month == 12) {
                 yearBalances[0] = balance;
             } else if (month == 24) {
@@ -102,7 +101,7 @@ public class Q2 {
             }
         }
 
-        // Step 12: Display the results using the array
+        // Display the results using the array
         System.out.printf("End of Year 1 Balance: RM %.2f%n", yearBalances[0]);
         System.out.printf("End of Year 2 Balance: RM %.2f%n", yearBalances[1]);
         System.out.printf("End of Year 3 Balance: RM %.2f%n", yearBalances[2]);
