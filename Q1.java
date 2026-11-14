@@ -37,7 +37,7 @@ public class Q1 {
 
             // Rule 2: Shift lowercase letters forward by the key (circular)
             if (ch >= 'a' && ch <= 'z') {
-                char converted = (char) ('a' + (ch - 'a' - key) % 26);
+                char converted = (char) ('a' + (ch - 'a' + key) % 26);
                 encoded += converted;
             }
             
